@@ -6,6 +6,7 @@ import { Mercury } from "./Models/Mercury/Mercury";
 import { Sun } from "./Models/Sun/Sun";
 import { Venus } from "./Models/Wenus/Venus";
 import { Earth } from './Models/Earth/Earth';
+import { Mars } from "./Models/Mars/Mars";
 
 const Background = () => {
     return (
@@ -15,6 +16,7 @@ const Background = () => {
             <Sun />
             <Venus />
             <Earth />
+            <Mars />
             <OrbitControls />
             <Stars />
             <ambientLight />
@@ -23,4 +25,4 @@ const Background = () => {
     );
 }
 
-export { Background };
+export default Background;

@@ -1,0 +1,11 @@
+.Loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  position: fixed;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=Loader.css.map */

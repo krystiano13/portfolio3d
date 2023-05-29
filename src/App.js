@@ -1,12 +1,17 @@
-import React from "react";
-import { Background } from "./components/Background/Background";
+import React, { Suspense } from "react";
+import { BrowserRouter, Routes, Router } from "react-router-dom";
+import { Loader } from "./components/Loader/Loader";
+
+const Background = React.lazy(() => import('./components/Background/Background'));
 
 const App = () => {
     return (
-        <div>
-            <Background />
-        </div>
-    )
+      <div className="App">
+        <Suspense fallback={<Loader />}>
+          <Background />
+        </Suspense>
+      </div>
+    );
 }
 
 export { App };
