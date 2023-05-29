@@ -10,7 +10,7 @@ export function Mercury(props) {
     ModelRef.current.rotation.y += 0.001;
   })
   return (
-    <group scale={[0.25,0.25,0.25]} ref={ModelRef} {...props} dispose={null}>
+    <group position={[-5,0,0]} scale={[0.25,0.25,0.25]} ref={ModelRef} {...props} dispose={null}>
       <mesh
         geometry={nodes["Sphere001_Material_#50_0"].geometry}
         material={materials.Material_50}

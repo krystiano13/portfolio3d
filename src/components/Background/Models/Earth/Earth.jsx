@@ -12,7 +12,7 @@ function Earth(props) {
   return (
     <group
       scale={[3.5, 3.5, 3.5]}
-      position={[45, 0, -15]}
+      position={[40, 0, -15]}
       ref={group}
       {...props}
       dispose={null}

@@ -12,7 +12,7 @@ export function Mars(props) {
   })
 
   return (
-    <group scale={[3,3,3]} position={[-40,0,-85]} ref={group} {...props} dispose={null}>
+    <group scale={[3,3,3]} position={[-20,0,-90]} ref={group} {...props} dispose={null}>
       <mesh geometry={nodes.Object_2.geometry} material={materials['Material.001']} rotation={[-Math.PI / 2, 0, 0]} />
     </group>
   )

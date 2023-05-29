@@ -7,6 +7,9 @@ import { Sun } from "./Models/Sun/Sun";
 import { Venus } from "./Models/Wenus/Venus";
 import { Earth } from './Models/Earth/Earth';
 import { Mars } from "./Models/Mars/Mars";
+import { Jowisz } from "./Models/Jowisz/Jowisz";
+import { Saturn } from "./Models/Saturn/Saturn";
+import { Seredip } from "./Models/Seredip/Seredip";
 
 const Background = () => {
     return (
@@ -17,6 +20,9 @@ const Background = () => {
             <Venus />
             <Earth />
             <Mars />
+            <Jowisz />
+            <Saturn />
+            <Seredip />
             <OrbitControls />
             <Stars />
             <ambientLight />
