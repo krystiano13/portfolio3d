@@ -30,7 +30,7 @@ const Background = ({ animState }) => {
           break;
       }
     }
-  }, [animState]);
+  }, [animState, CameraRef.current]);
 
   return (
     <section className="BackgroundContainer">
