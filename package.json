@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "serve": "serve -s build"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "react-router": "^6.11.2",
     "react-router-dom": "^6.11.2",
     "react-scripts": "^5.0.1",
+    "serve": "^14.2.0",
     "three": "^0.152.2"
   },
   "browserslist": {

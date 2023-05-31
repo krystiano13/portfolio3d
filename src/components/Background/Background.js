@@ -1,5 +1,5 @@
 import React from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 import { PerspectiveCamera, OrbitControls, Stars } from "@react-three/drei";
 import "./Background.css";
 import { Mercury } from "./Models/Mercury/Mercury";
@@ -11,19 +11,26 @@ import { Jowisz } from "./Models/Jowisz/Jowisz";
 import { Saturn } from "./Models/Saturn/Saturn";
 import { Seredip } from "./Models/Seredip/Seredip";
 import { MercuryPos, MercuryRot } from "./Animations/MercuryAnim";
+import { defaultPos, defaultRot } from "./Animations/DefaultAnim";
 import gsap from "gsap";
 
-const Background = () => {
+const Background = ({ animState }) => {
   const CameraRef = React.useRef(null);
 
-  React.useLayoutEffect(() => {
-      //gsap.to(CameraRef.current.position, {
-        //x: 0,
-       //y: 35,
-        //z: 225,
-        //duration: 2,
-     //});
-  });
+  React.useEffect(() => {
+    if (CameraRef.current !== null) {
+      switch (animState) {
+        case 0:
+          defaultPos(CameraRef);
+          defaultRot(CameraRef);
+          break;
+        case 1:
+          MercuryPos(CameraRef);
+          MercuryRot(CameraRef);
+          break;
+      }
+    }
+  }, [animState]);
 
   return (
     <section className="BackgroundContainer">
@@ -31,7 +38,7 @@ const Background = () => {
         <PerspectiveCamera
           ref={CameraRef}
           rotation={[-0.28, -0.1, 0]}
-          position={[0, 35, 225]}
+          position={[0, 35, 200]}
           fov={75}
           makeDefault
         />
