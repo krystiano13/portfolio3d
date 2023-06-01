@@ -8,34 +8,23 @@ import { Saturn } from "./Models/Saturn/Saturn";
 import Seredip from "./Models/Seredip/Seredip";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, Stars } from "@react-three/drei";
-import React ,{ useRef, useEffect, useLayoutEffect, useState } from "react";
-import { MercuryPos, MercuryRot } from "./Animations/MercuryAnim";
-import { defaultPos, defaultRot } from "./Animations/DefaultAnim";
+import React, { useRef, useEffect, lazy, Suspense } from "react";
 
 const Planets = ({ animState, ready }) => {
   const CameraRef = useRef(null);
-  const [counter,setCounter] = React.useState(0);
+  const [counter, setCounter] = React.useState(0);
 
   React.useLayoutEffect(() => {
     setCounter(counter + 1);
-    if(counter > 0) {
-        setTimeout(() => ready(),100);
-    } 
-  },[])
+    if (counter > 0) {
+      setTimeout(() => ready(), 200);
+    }
+  }, []);
 
   useEffect(() => {
-    if (CameraRef.current !== null) {
-      switch (animState) {
-        case 0:
-          defaultPos(CameraRef);
-          defaultRot(CameraRef);
-          break;
-        case 1:
-          MercuryPos(CameraRef);
-          MercuryRot(CameraRef);
-          break;
-      }
-    }
+    import("./LoadAnimations").then((module) =>
+      module.LoadAnimations(CameraRef, animState)
+    );
   }, [animState]);
 
   return (

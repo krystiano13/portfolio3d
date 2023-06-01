@@ -28,7 +28,6 @@ const Home = ({ triggerAnimation }) => {
   };
 
   return (
-    <>
       <div ref={WrapperRef} className="Home Wrapper">
         <section className="Home__content">
           <h1 className="Home__content__title">Krystian Zieja</h1>
@@ -40,7 +39,7 @@ const Home = ({ triggerAnimation }) => {
                 triggerAnimation(1);
               }, 500);
               setTimeout(() => {
-                navigate("/about");
+                navigate("/portfolioLiveTest/about");
               }, 750);
             }}
             className="Home__content__button"
@@ -50,7 +49,6 @@ const Home = ({ triggerAnimation }) => {
         </section>
         <HomeWaves />
       </div>
-    </>
   );
 };
 

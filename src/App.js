@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./views/About/About";
 import Background from "./components/Background/Background";
 
 const Home = React.lazy(() => import('./views/Home/Home'));
+const About = React.lazy(() => import('./views/About/About'));
 
 const App = () => {
   const [animState,setAnimState] = React.useState(0);
@@ -13,19 +13,21 @@ const App = () => {
     setAnimState(animationId);
   }
 
-  React.useEffect(() => console.log(ready),[ready])
-
   return (
     <div className="App">
       <BrowserRouter>
         <Background ready={() => setReady(true)} animState={animState} />
         <Routes>
           <Route
-            path="/"
-            element={ready ? <Home ready={ready} triggerAnimation={triggerAnimation} /> : null}
+            path="/portfolioLiveTest"
+            element={
+              ready ? (
+                <Home ready={ready} triggerAnimation={triggerAnimation} />
+              ) : null
+            }
           />
           <Route
-            path="/about"
+            path="/portfolioLiveTest/about"
             element={<About triggerAnimation={triggerAnimation} />}
           />
         </Routes>

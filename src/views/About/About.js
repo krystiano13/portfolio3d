@@ -1,9 +1,9 @@
 import React, { useRef, lazy, Suspense } from "react";
 import gsap from 'gsap';
-import AboutWaves  from "./components/AboutWaves";
-import AboutArticle from "./components/AboutArticle";
 import { useNavigate } from "react-router";
-
+import photo from './photo.jpg';
+import AboutArticle from './components/AboutArticle';
+import AboutWaves from './components/AboutWaves';
 import "./About.css";
 import "../Wrapper.css";
 
@@ -12,14 +12,13 @@ const About = ({ triggerAnimation }) => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    gsap.set(AboutRef.current, { autoAlpha : 0, x : 1000 });
     gsap.to(AboutRef.current, { x : 0, autoAlpha : 1, duration : .75 });
   }, []);
 
   const goBack = () => {
     gsap.to(AboutRef.current, { autoAlpha : 0, x : 600, duration : .75 });
     setTimeout(() => triggerAnimation(0),500);
-    setTimeout(() => navigate('/'),750);
+    setTimeout(() => navigate("/portfolioLiveTest"), 750);
   }
 
   return (
@@ -27,7 +26,9 @@ const About = ({ triggerAnimation }) => {
       <section className="About__content">
         <h1 className="About__content__title">About Me</h1>
         <section className="About__content__info">
-          <div className="About__content__info__img" />
+          <div className="About__content__info__img">
+            <img loading="eager" className="avatar" src={photo} />
+          </div>
           <AboutArticle goBack={goBack} />
         </section>
       </section>

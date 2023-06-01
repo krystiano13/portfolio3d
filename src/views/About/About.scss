@@ -8,6 +8,7 @@
   margin-top: 10vh;
 
   transform : translateX(100vw);
+  opacity : 0;
 
   &__content {
     width: 100%;
@@ -59,13 +60,15 @@
       }
 
       &__img {
-        width: 25vh;
+        width: 23vh;
         height: 30vh;
         border: none;
         position: relative;
-        background-image: url("./photo.jpg");
-        background-size: 125%;
-        background-position: center 75%;
+
+        .avatar {
+          width : 23vh;
+          height : 30vh;
+        }
       }
 
       &__img::after {

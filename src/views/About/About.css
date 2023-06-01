@@ -6,6 +6,7 @@
   margin-left: 45vw;
   margin-top: 10vh;
   transform: translateX(100vw);
+  opacity: 0;
 }
 .About__content {
   width: 100%;
@@ -52,13 +53,14 @@
   font-size: 2vh;
 }
 .About__content__info__img {
-  width: 25vh;
+  width: 23vh;
   height: 30vh;
   border: none;
   position: relative;
-  background-image: url("./photo.jpg");
-  background-size: 125%;
-  background-position: center 75%;
+}
+.About__content__info__img .avatar {
+  width: 23vh;
+  height: 30vh;
 }
 .About__content__info__img::after {
   content: "";
