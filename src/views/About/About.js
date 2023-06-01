@@ -1,41 +1,39 @@
-import React from "react";
+import React, { useRef, lazy, Suspense } from "react";
+import gsap from 'gsap';
+import AboutWaves  from "./components/AboutWaves";
+import AboutArticle from "./components/AboutArticle";
+import { useNavigate } from "react-router";
 
-import './About.css';
-import '../Wrapper.css';
+import "./About.css";
+import "../Wrapper.css";
 
 const About = ({ triggerAnimation }) => {
+  const AboutRef = useRef(null);
+  const navigate = useNavigate();
 
-    React.useEffect(() => {
-        triggerAnimation(1);
-    },[]);
+  React.useEffect(() => {
+    gsap.set(AboutRef.current, { autoAlpha : 0, x : 1000 });
+    gsap.to(AboutRef.current, { x : 0, autoAlpha : 1, duration : .75 });
+  }, []);
 
-    return (
-      <div className="About Wrapper">
-        <section className="About__content">
-          <h1 className="About__content__title">About Me</h1>
-          <section className="About__content__info">
-            <div className="About__content__info__img" />
-            <article className="About__content__info__art">
-              <span>
-                {" "}
-                Jestem absolwentem technikum informatycznego. Po posiedzeniach w
-                szkolnej ławce zajmowałem się nauką programowania, które w
-                tamtym czasie stało się moim najważniejszym hobby. Chciałbym
-                znacząco rozwinąć swoje umiejętności w tej dziedzinie poprzez
-                rozpoczęcie pracy w zawodzie programisty
-              </span>
-              <button className="About__content__info__art__btn">Next</button>
-            </article>
-          </section>
+  const goBack = () => {
+    gsap.to(AboutRef.current, { autoAlpha : 0, x : 600, duration : .75 });
+    setTimeout(() => triggerAnimation(0),500);
+    setTimeout(() => navigate('/'),750);
+  }
+
+  return (
+    <div ref={AboutRef} className="About Wrapper">
+      <section className="About__content">
+        <h1 className="About__content__title">About Me</h1>
+        <section className="About__content__info">
+          <div className="About__content__info__img" />
+          <AboutArticle goBack={goBack} />
         </section>
-        <section className="About__waves">
-          <div className="About__waves__wave wave1"></div>
-          <div className="About__waves__wave wave2"></div>
-          <div className="About__waves__wave wave3"></div>
-          <div className="About__waves__wave wave4"></div>
-        </section>
-      </div>
-    );
-}
+      </section>
+      <AboutWaves />
+    </div>
+  );
+};
 
-export { About };
+export default About;

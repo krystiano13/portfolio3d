@@ -1,39 +1,56 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { useNavigate } from "react-router";
+import gsap from "gsap";
+import HomeWaves from "./HomeWaves";
 
 import "./Home.css";
 import "../Wrapper.css";
 
 const Home = ({ triggerAnimation }) => {
   const navigate = useNavigate();
+  const WrapperRef = React.useRef(null);
+
   React.useEffect(() => {
-    triggerAnimation(0);
+    gsap.set(WrapperRef.current, { x: 600, autoAlpha: 0, zIndex: 5 });
+    gsap.fromTo(
+      WrapperRef.current,
+      { x: 600, autoAlpha: 0, zIndex: 5 },
+      { x: 0, autoAlpha: 1, duration: 0.75 }
+    );
   }, []);
+
   React.useEffect(() => {
     window.history.pushState(null, null, window.location.href);
   });
 
+  const leaveAnimation = () => {
+    gsap.to(WrapperRef.current, { x: 600, autoAlpha: 0, duration: 0.75 });
+  };
+
   return (
-    <div className="Home Wrapper">
-      <section className="Home__content">
-        <h1 className="Home__content__title">Krystian Zieja</h1>
-        <h2 className="Home__content__subtitle">Frontend Developer</h2>
-        <button
-          onClick={() => {
-            navigate("/about");
-          }}
-          className="Home__content__button"
-        >
-          Start
-        </button>
-      </section>
-      <section className="Home__waves">
-        <div className="Home__waves__wave wave1"></div>
-        <div className="Home__waves__wave wave2"></div>
-        <div className="Home__waves__wave wave3"></div>
-        <div className="Home__waves__wave wave4"></div>
-      </section>
-    </div>
+    <>
+      <div ref={WrapperRef} className="Home Wrapper">
+        <section className="Home__content">
+          <h1 className="Home__content__title">Krystian Zieja</h1>
+          <h2 className="Home__content__subtitle">Frontend Developer</h2>
+          <button
+            onClick={() => {
+              leaveAnimation();
+              setTimeout(() => {
+                triggerAnimation(1);
+              }, 500);
+              setTimeout(() => {
+                navigate("/about");
+              }, 750);
+            }}
+            className="Home__content__button"
+          >
+            Start
+          </button>
+        </section>
+        <HomeWaves />
+      </div>
+    </>
   );
 };
 

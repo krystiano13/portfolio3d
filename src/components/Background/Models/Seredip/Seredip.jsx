@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei'
 import seredipModel from './seredip.glb';
 import { useFrame } from '@react-three/fiber';
 
-export function Seredip(props) {
+export default function Seredip(props) {
   const { nodes, materials } = useGLTF(seredipModel);
   const group = useRef(null);
 
