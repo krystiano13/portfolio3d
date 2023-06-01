@@ -1,14 +1,9 @@
-import { Mercury } from "./Models/Mercury/Mercury";
-import { Sun } from "./Models/Sun/Sun";
-import { Venus } from "./Models/Wenus/Venus";
-import { Earth } from "./Models/Earth/Earth";
-import { Mars } from "./Models/Mars/Mars";
-import { Jowisz } from "./Models/Jowisz/Jowisz";
 import { Saturn } from "./Models/Saturn/Saturn";
-import Seredip from "./Models/Seredip/Seredip";
 import { Canvas } from "@react-three/fiber";
 import { PerspectiveCamera, Stars } from "@react-three/drei";
-import React, { useRef, useEffect, lazy, Suspense } from "react";
+import React, { useRef, useEffect } from "react";
+import { planetList } from "./planetList";
+import { Planet } from "./Planet";
 
 const Planets = ({ animState, ready }) => {
   const CameraRef = useRef(null);
@@ -36,14 +31,16 @@ const Planets = ({ animState, ready }) => {
         fov={75}
         makeDefault
       />
-      <Mercury />
-      <Sun />
-      <Venus />
-      <Earth />
-      <Mars />
-      <Jowisz />
+      {planetList.map((item) => (
+        <Planet
+          key={item.name}
+          texturePath={item.texture}
+          rotSpeed={item.rotationSpeed}
+          position={item.position}
+          scale={item.scale}
+        />
+      ))}
       <Saturn />
-      <Seredip />
       <Stars />
       <ambientLight />
     </Canvas>
