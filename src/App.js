@@ -1,9 +1,10 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Loader } from "./components/Loader/Loader";
+import About from "./views/About/About";
+import { Technologies } from "./views/Technologies/Technologies";
 
 const Home = React.lazy(() => import("./views/Home/Home"));
-const About = React.lazy(() => import("./views/About/About"));
 const Planets = React.lazy(() => import("./components/Background/Planets"));
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
               path="/portfolioLiveTest/about"
               element={<About triggerAnimation={triggerAnimation} />}
             />
+            <Route path="/portfolioLiveTest/technologies" element={<Technologies triggerAnimation={triggerAnimation} />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

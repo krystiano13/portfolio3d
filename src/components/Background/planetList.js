@@ -1,10 +1,10 @@
 import mercury from './Textures/mercury.jpg';
-import venus from './Textures/venus.jpg';
+import venus from './Textures/venus.webp';
 import earth from './Textures/earth.webp';
 import mars from './Textures/mars.jpg';
 import jupiter from './Textures/jupiter.jpg';
 import uranus from './Textures/uranus.jpg';
-import sun from './Textures/sun.jpg';
+import sun from './Textures/sun.webp';
 
 export const planetList = [
   {

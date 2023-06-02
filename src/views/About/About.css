@@ -12,6 +12,7 @@
   width: 100%;
   height: 100%;
   position: fixed;
+  z-index: 1000;
 }
 .About__content__title {
   font-size: 5vh;
@@ -33,14 +34,15 @@
 .About__content__info__art__text {
   width: 100%;
   max-width: 80%;
-  font-size: 2.5vh;
-  height: 27vh;
+  font-size: 1.2vw;
+  height: auto;
 }
 .About__content__info__art__Buttons {
   width: 45vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 1.5vh;
 }
 .About__content__info__art__Buttons__btn {
   height: 3vh;
@@ -84,11 +86,9 @@
 }
 .About__waves {
   width: 100%;
-  height: 50%;
+  height: 100%;
   position: relative;
   overflow: hidden;
-  margin-top: 40%;
-  z-index: -1;
 }
 .About__waves__wave {
   position: absolute;

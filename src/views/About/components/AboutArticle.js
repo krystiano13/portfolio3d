@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const AboutArticle = ({ goBack }) => {
+const AboutArticle = ({ goBack, goNext }) => {
     return (
       <div className="About__content__info__art">
         <article className="About__content__info__art__text">
@@ -15,7 +15,7 @@ const AboutArticle = ({ goBack }) => {
           <button onClick={goBack} className="About__content__info__art__Buttons__btn">
             Back
           </button>
-          <button className="About__content__info__art__Buttons__btn">
+          <button onClick={goNext} className="About__content__info__art__Buttons__btn">
             Next
           </button>
         </div>
@@ -24,7 +24,8 @@ const AboutArticle = ({ goBack }) => {
 }
 
 AboutArticle.propTypes = {
-  goBack : PropTypes.func
+  goBack : PropTypes.func,
+  goNext : PropTypes.func
 }
 
 export default AboutArticle; 

@@ -1,0 +1,137 @@
+.Technologies {
+  width: 100vh;
+  height: 80vh;
+  position: fixed;
+  z-index: 10;
+  margin-left: 5vh;
+  margin-top: 10vh;
+  transform: translateX(-200vw);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.Technologies__waves {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 35%;
+  z-index: -50;
+}
+.Technologies__waves__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: url("../wave.png");
+  background-size: 300% 100%;
+}
+.Technologies__waves .wave1 {
+  animation: animate1 linear infinite 30s;
+  bottom: 0;
+}
+.Technologies__waves .wave2 {
+  animation: animate2 linear infinite 20s;
+  opacity: 0.5;
+  animation-delay: -1s;
+  height: 45%;
+}
+.Technologies__waves .wave3 {
+  animation: animate1 linear infinite 30s;
+  opacity: 0.2;
+  animation-delay: -3s;
+  height: 50%;
+}
+.Technologies__waves .wave4 {
+  animation: animate2 linear infinite 15s;
+  opacity: 0.7;
+  animation-delay: -6s;
+  height: 48%;
+}
+@keyframes animate1 {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: 100%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0%;
+  }
+  50% {
+    background-position-x: -100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}
+.Technologies__content {
+  width: 100%;
+  height: 70%;
+  position: fixed;
+}
+.Technologies__content__techSection {
+  width: 100vh;
+  height: 30%;
+  padding-left: 4vh;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.Technologies__content__techSection .skill {
+  color: white;
+  background-color: rgb(153, 1, 153);
+  width: auto;
+  padding: 1vh;
+  height: auto;
+  font-size: 2vh;
+  text-align: center;
+  display: block;
+  border-radius: 2vh;
+  margin: 1vh;
+}
+.Technologies__content__title {
+  text-align: left;
+  padding-left: 4vh;
+  padding-top: 4vh;
+  font-size: 6vh;
+  padding-top: 4vh;
+  padding-right: 4vh;
+  padding-bottom: 4vh;
+}
+.Technologies__content__subtitle {
+  padding-left: 5vh;
+  text-align: left;
+  font-size: 3vh;
+  padding-right: 4vh;
+  font-weight: 500;
+}
+.Technologies__content__Buttons {
+  width: 45vh;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5vh;
+  margin-left: 5vh;
+  z-index: 1000;
+}
+.Technologies__content__Buttons__btn {
+  height: 3vh;
+  width: 20vh;
+  color: white;
+  background-color: rgb(153, 1, 153);
+  cursor: pointer;
+  position: sticky;
+  z-index: 1001;
+  border: none;
+  border-radius: 2vh;
+  font-size: 2vh;
+}/*# sourceMappingURL=Technologies.css.map */

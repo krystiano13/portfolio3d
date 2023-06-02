@@ -21,6 +21,12 @@ const About = ({ triggerAnimation }) => {
     setTimeout(() => triggerAnimation(0),500);
     setTimeout(() => navigate("/portfolioLiveTest"), 750);
   }
+  
+  const goNext = () => {
+    gsap.to(AboutRef.current, { autoAlpha : 0, x : 600, duration : .75 });
+    setTimeout(() => triggerAnimation(2),500);
+    setTimeout(() => navigate("/portfolioLiveTest/technologies"), 750);
+  }
 
   return (
     <div ref={AboutRef} className="About Wrapper">
@@ -30,7 +36,7 @@ const About = ({ triggerAnimation }) => {
           <div className="About__content__info__img">
             <img loading="eager" className="avatar" src={photo} />
           </div>
-          <AboutArticle goBack={goBack} />
+          <AboutArticle goNext={goNext} goBack={goBack} />
         </section>
       </section>
       <AboutWaves />

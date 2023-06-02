@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { useNavigate } from "react-router";
 import gsap from "gsap";
-import HomeWaves from "./HomeWaves";
+import { HomeWaves } from "./HomeWaves";
 
 import "./Home.css";
 import "../Wrapper.css";
