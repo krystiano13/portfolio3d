@@ -1,4 +1,5 @@
-import React, { useRef, lazy, Suspense } from "react";
+import React, { useRef } from "react";
+import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { useNavigate } from "react-router";
 import photo from './photo.jpg';
@@ -36,5 +37,9 @@ const About = ({ triggerAnimation }) => {
     </div>
   );
 };
+
+About.propTypes = {
+  triggerAnimation : PropTypes.func
+}
 
 export default About;

@@ -1,4 +1,5 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 import { useNavigate } from "react-router";
 import gsap from "gsap";
 import HomeWaves from "./HomeWaves";
@@ -51,5 +52,9 @@ const Home = ({ triggerAnimation }) => {
       </div>
   );
 };
+
+Home.propTypes = {
+  triggerAnimation : PropTypes.func
+}
 
 export default Home;

@@ -1,3 +1,5 @@
+import React from "react";
+
 const HomeWaves = () => (
     <section className="Home__waves">
         <div className="Home__waves__wave wave1"></div>

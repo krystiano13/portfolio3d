@@ -1,3 +1,6 @@
+import React from "react";
+import PropTypes from 'prop-types';
+
 const AboutArticle = ({ goBack }) => {
     return (
       <div className="About__content__info__art">
@@ -18,6 +21,10 @@ const AboutArticle = ({ goBack }) => {
         </div>
       </div>
     );
+}
+
+AboutArticle.propTypes = {
+  goBack : PropTypes.func
 }
 
 export default AboutArticle; 

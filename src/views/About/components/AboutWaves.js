@@ -1,3 +1,5 @@
+import React from "react";
+
 const AboutWaves = () => {
     return (
       <section className="About__waves">

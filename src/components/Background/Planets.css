@@ -1,4 +1,4 @@
-.BackgroundContainer {
+.PlanetsContainer {
   position: fixed;
   z-index: -1;
   width: 100vw;
@@ -14,4 +14,4 @@
   to {
     opacity: 1;
   }
-}/*# sourceMappingURL=Background.css.map */
+}/*# sourceMappingURL=Planets.css.map */
