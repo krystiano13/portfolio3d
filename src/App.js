@@ -10,7 +10,7 @@ const Home = React.lazy(() => import("./views/Home/Home"));
 const Planets = React.lazy(() => import("./components/Background/Planets"));
 
 const App = () => {
-  const [animState, setAnimState] = React.useState(0);
+  const [animState, setAnimState] = React.useState(-1);
 
   const triggerAnimation = (animationId) => {
     setAnimState(animationId);

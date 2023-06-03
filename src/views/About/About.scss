@@ -34,10 +34,15 @@
         width: 70%;
         height: 30vh;
 
+        display : flex;
+        flex-direction: column;
+        justify-content: space-between;
+
         &__text {
           width: 100%;
           max-width: 80%;
-          font-size: 1.2vw;
+          height: 30vh;
+          font-size: 1.3vw;
           height: auto;
         }
 
