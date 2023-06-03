@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Loader } from "./components/Loader/Loader";
 import About from "./views/About/About";
 import { Technologies } from "./views/Technologies/Technologies";
+import { FirstProject } from "./views/Projects/Subpages/FirstProject";
 
 import './styles/Planets.css';
 
@@ -36,6 +37,7 @@ const App = () => {
               path="/portfolioLiveTest/technologies"
               element={<Technologies triggerAnimation={triggerAnimation} />}
             />
+            <Route path="/portfolioLiveTest/projects/first" element={<FirstProject triggerAnimation={triggerAnimation} />} />
           </Routes>
         </BrowserRouter>
       </Suspense>

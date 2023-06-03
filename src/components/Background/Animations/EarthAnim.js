@@ -1,19 +1,19 @@
 import gsap from "gsap";
 
-const VenusPos = (ref) => {
+const EarthPos = (ref) => {
   gsap.to(ref.current.position, {
-    x: -3,
-    y: 0.5,
-    z: 40,
+    x: -25,
+    y: 1,
+    z: 95,
     duration: 1,
   });
 };
-const VenusRot = (ref) => {
+const EarthRot = (ref) => {
   gsap.to(ref.current.rotation, {
     x: 0,
-    y: -0.14,
+    y: 0.3,
     duration: 1,
   });
 };
 
-export { VenusPos, VenusRot };
+export { EarthPos, EarthRot };

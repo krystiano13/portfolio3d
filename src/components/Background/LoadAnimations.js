@@ -1,6 +1,7 @@
 import { MercuryPos, MercuryRot } from "./Animations/MercuryAnim";
 import { defaultPos, defaultRot } from "./Animations/DefaultAnim";
 import { VenusPos, VenusRot } from "./Animations/VenusAnim";
+import { EarthPos, EarthRot } from "./Animations/EarthAnim";
 
 const LoadAnimations = (CameraRef, animState) => {
   if (CameraRef.current !== null) {
@@ -16,6 +17,10 @@ const LoadAnimations = (CameraRef, animState) => {
       case 2:
         VenusPos(CameraRef);
         VenusRot(CameraRef);
+        break;
+      case 3 :
+        EarthPos(CameraRef);
+        EarthRot(CameraRef);
         break;
     }
   }

@@ -18,14 +18,14 @@ export const planetList = [
     name: "venus",
     texture: venus,
     scale: [5, 5, 5],
-    position: [10, 0, 30],
+    position: [5, 0, 30],
     rotationSpeed: 0.001,
   },
   {
     name: "earth",
     texture: earth,
     scale: [5, 5, 5],
-    position: [40, 0, -15],
+    position: [-45, 0, 80],
     rotationSpeed: 0.001,
   },
   {

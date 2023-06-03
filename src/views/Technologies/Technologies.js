@@ -14,6 +14,7 @@ const Technologies = ({ triggerAnimation }) => {
     gsap.set(ref.current, { x: -1000, autoAlpha: 0 });
     gsap.to(ref.current, { x: 0, autoAlpha: 1, duration: 0.75 });
   }, []);
+
   const goBack = () => {
     gsap.to(ref.current, { x: -1000, autoAlpha: 0, duration: 0.5 });
     setTimeout(() => {
@@ -23,6 +24,17 @@ const Technologies = ({ triggerAnimation }) => {
       navigate("/portfolioLiveTest/about");
     }, 750);
   };
+
+  const goNext = () => {
+    gsap.to(ref.current, { x: -1000, autoAlpha: 0, duration: 0.5 });
+     setTimeout(() => {
+       triggerAnimation(3);
+     }, 500);
+     setTimeout(() => {
+       navigate("/portfolioLiveTest/projects/first");
+     }, 750);
+  }
+
   return (
     <div ref={ref} className="Technologies Wrapper">
       <section className="Technologies__content">
@@ -52,7 +64,7 @@ const Technologies = ({ triggerAnimation }) => {
           >
             Back
           </button>
-          <button className="Technologies__content__Buttons__btn">Next</button>
+          <button onClick={() => goNext()} className="Technologies__content__Buttons__btn">Next</button>
         </div>
       </section>
       <section className="Technologies__waves">
