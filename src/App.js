@@ -4,6 +4,8 @@ import { Loader } from "./components/Loader/Loader";
 import About from "./views/About/About";
 import { Technologies } from "./views/Technologies/Technologies";
 
+import './styles/Planets.css';
+
 const Home = React.lazy(() => import("./views/Home/Home"));
 const Planets = React.lazy(() => import("./components/Background/Planets"));
 
@@ -18,7 +20,9 @@ const App = () => {
     <div className="App">
       <Suspense fallback={<Loader></Loader>}>
         <BrowserRouter>
-          <Planets animState={animState} />
+          <section className="PlanetsContainer">
+            <Planets animState={animState} />
+          </section>
           <Routes>
             <Route
               path="/portfolioLiveTest"
@@ -28,7 +32,10 @@ const App = () => {
               path="/portfolioLiveTest/about"
               element={<About triggerAnimation={triggerAnimation} />}
             />
-            <Route path="/portfolioLiveTest/technologies" element={<Technologies triggerAnimation={triggerAnimation} />} />
+            <Route
+              path="/portfolioLiveTest/technologies"
+              element={<Technologies triggerAnimation={triggerAnimation} />}
+            />
           </Routes>
         </BrowserRouter>
       </Suspense>
