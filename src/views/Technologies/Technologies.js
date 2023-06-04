@@ -81,4 +81,4 @@ Technologies.propTypes = {
   triggerAnimation: PropTypes.func,
 };
 
-export { Technologies };
+export default Technologies;

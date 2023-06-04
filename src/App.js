@@ -1,14 +1,16 @@
 import React, { Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Loader } from "./components/Loader/Loader";
-import About from "./views/About/About";
-import { Technologies } from "./views/Technologies/Technologies";
-import { FirstProject } from "./views/Projects/Subpages/FirstProject";
 
-import './styles/Planets.css';
+import "./styles/Planets.css";
 
 const Home = React.lazy(() => import("./views/Home/Home"));
 const Planets = React.lazy(() => import("./components/Background/Planets"));
+const About = React.lazy(() => import("./views/About/About"));
+const Technologies = React.lazy(() =>
+  import("./views/Technologies/Technologies")
+);
+const Project = React.lazy(() => import("./views/Projects/Subpages/Project"));
 
 const App = () => {
   const [animState, setAnimState] = React.useState(-1);
@@ -31,13 +33,35 @@ const App = () => {
             />
             <Route
               path="/portfolioLiveTest/about"
-              element={<About triggerAnimation={triggerAnimation} />}
+              element={
+                <Suspense>
+                  <About triggerAnimation={triggerAnimation} />
+                </Suspense>
+              }
             />
             <Route
               path="/portfolioLiveTest/technologies"
-              element={<Technologies triggerAnimation={triggerAnimation} />}
+              element={
+                <Suspense>
+                  <Technologies triggerAnimation={triggerAnimation} />
+                </Suspense>
+              }
             />
-            <Route path="/portfolioLiveTest/projects/first" element={<FirstProject triggerAnimation={triggerAnimation} />} />
+            <Route
+              path="/portfolioLiveTest/projects/first"
+              element={
+                <Suspense>
+                  <Project
+                    projectTitle="Pomodoro Timer"
+                    arrayOfClasses={["p11", "p12", "p13"]}
+                    triggerAnimation={triggerAnimation}
+                    left={true}
+                    live="https://krystiano13.github.io/pomodoro/"
+                    code="https://github.com/krystiano13/pomodoro_src"
+                  />
+                </Suspense>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </Suspense>

@@ -2,7 +2,6 @@
   width: 55vw;
   height: 80vh;
   margin-top: 10vh;
-  margin-left: 40vw;
   position: fixed;
   overflow: hidden;
   opacity: 0;
@@ -13,7 +12,7 @@
 }
 .Project__content {
   width: 55vw;
-  height: 60vh;
+  height: 65vh;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -48,23 +47,56 @@
   width: 65vh;
   height: 35vh;
   margin-top: 4vh;
-  position: sticky;
+  position: relative;
   z-index: 1000;
   border-radius: 2vh;
-  background-color: red;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  transition: background 250ms;
+  will-change: background;
+  background-color: transparent;
+  padding-bottom: 3vh;
+}
+.Project__content__info__screenShotViewer .img {
+  position: absolute;
+  width: 65vh;
+  height: 35vh;
+  z-index: 10;
+  transform: translateY(3vh);
+  background-size: cover;
+  background-position: center;
+}
+.Project__content__info__screenShotViewer .dots {
+  position: fixed;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  padding-bottom: 3vh;
-  padding-left: 21vh;
-  padding-right: 21vh;
+  width: 20vh;
+  z-index: 15;
 }
-.Project__content__info__screenShotViewer .dot {
+.Project__content__info__screenShotViewer .dots .dot {
   width: 3vh;
   height: 3vh;
-  background-color: purple;
   border-radius: 50%;
   cursor: pointer;
+}
+.Project__content__info__screenShotViewer .dots .on {
+  background-color: rgb(153, 1, 153);
+}
+.Project__content__info__screenShotViewer .dots .off {
+  background-color: rgba(153, 1, 153, 0.5);
+}
+.Project__content__info .p11 {
+  background-image: url("../../../images/1p1.png");
+}
+.Project__content__info .p12 {
+  background-image: url("../../../images/1p2.png");
+}
+.Project__content__info .p13 {
+  background-image: url("../../../images/1p3.png");
 }
 .Project__content__title {
   text-align: right;
@@ -137,4 +169,12 @@
   100% {
     background-position: 0%;
   }
+}
+
+.left {
+  margin-left: 40vw;
+}
+
+.right {
+  margin-left: 10vh;
 }/*# sourceMappingURL=Project.css.map */

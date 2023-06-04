@@ -2,11 +2,10 @@
   width: 55vw;
   height: 80vh;
   margin-top: 10vh;
-  margin-left: 40vw;
   position: fixed;
   overflow: hidden;
 
-  opacity : 0;
+  opacity: 0;
   transform: translateX(100vw);
 
   display: flex;
@@ -15,64 +14,105 @@
 
   &__content {
     width: 55vw;
-    height: 60vh;
+    height: 65vh;
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
     &__info {
-        width : 55vw;
-        display : flex;
-        justify-content: space-between;
-        padding-left: 4vh;
-        padding-right: 4vh;
+      width: 55vw;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 4vh;
+      padding-right: 4vh;
 
-        &__buttons {
-            width : auto;
-            height : auto;
-            margin-top: 4vh;
+      &__buttons {
+        width: auto;
+        height: auto;
+        margin-top: 4vh;
 
-            display : flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
 
-            &__button {
-                width : 25vh;
-                height : 5vh;
-                border : none;
-                border-radius: 1vh;
-                background-color: rgb(153,1,153);
-                cursor : pointer;
-                font-size : 2vh;
-            }
+        &__button {
+          width: 25vh;
+          height: 5vh;
+          border: none;
+          border-radius: 1vh;
+          background-color: rgb(153, 1, 153);
+          cursor: pointer;
+          font-size: 2vh;
         }
+      }
 
       &__screenShotViewer {
         width: 65vh;
         height: 35vh;
         margin-top: 4vh;
-        position: sticky;
+        position: relative;
         z-index: 1000;
         border-radius: 2vh;
-
-        background-color: red;
+        background-size: cover;
+        background-position: center;
 
         display: flex;
-        justify-content: space-evenly;
         align-items: flex-end;
-        padding-bottom: 3vh;
-        padding-left: 21vh;
-        padding-right: 21vh;
+        justify-content: center;
 
-        .dot {
-          width: 3vh;
-          height: 3vh;
-          background-color: purple;
-          border-radius: 50%;
-          cursor: pointer;
+        transition: background 250ms;
+        will-change: background;
+
+        background-color: transparent;
+
+        padding-bottom: 3vh;
+
+        .img {
+          position: absolute;
+          width: 65vh;
+          height: 35vh;
+          z-index: 10;
+          transform: translateY(3vh);
+          background-size: cover;
+          background-position: center;
         }
+
+        .dots {
+          position: fixed;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: flex-end;
+          width: 20vh;
+          z-index: 15;
+
+          .dot {
+            width: 3vh;
+            height: 3vh;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          .on {
+            background-color: rgba(153, 1, 153,1);
+          }
+
+          .off {
+            background-color: rgba(153, 1, 153,0.5);
+          }
+        }
+      }
+
+      .p11 {
+        background-image: url("../../../images/1p1.png");
+      }
+
+      .p12 {
+        background-image: url("../../../images/1p2.png");
+      }
+      .p13 {
+        background-image: url("../../../images/1p3.png");
       }
     }
 
@@ -162,4 +202,12 @@
       }
     }
   }
+}
+
+.left {
+  margin-left: 40vw;
+}
+
+.right {
+  margin-left : 10vh;
 }

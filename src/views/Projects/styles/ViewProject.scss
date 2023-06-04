@@ -1,0 +1,30 @@
+.ViewProject {
+    width: 55vw;
+    height: 65vh;
+    position: fixed;
+
+    &__title {
+      text-align: center;
+      font-size: 6vh;
+      padding-top: 4vh;
+      padding-right: 4vh;
+    }
+
+    &__buttons {
+        display : flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height : 80%;
+    }
+}
+
+.viewButton {
+    background-color: rgb(153,1,153);
+    border : none;
+    width : 40vh;
+    height : 6vh;
+    cursor : pointer;
+    border-radius: 2vh;
+    font-size : 2.25vh;
+}

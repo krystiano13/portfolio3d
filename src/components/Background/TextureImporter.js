@@ -6,4 +6,4 @@ const TextureImporter = (path) => {
     return texture;
 }
 
-export { TextureImporter };
+export default TextureImporter;

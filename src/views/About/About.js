@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { useNavigate } from "react-router";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import photo from './photo.jpg';
 import AboutArticle from './components/AboutArticle';
 import AboutWaves from './components/AboutWaves';
@@ -34,7 +35,7 @@ const About = ({ triggerAnimation }) => {
         <h1 className="About__content__title">About Me</h1>
         <section className="About__content__info">
           <div className="About__content__info__img">
-            <img loading="eager" className="avatar" src={photo} />
+            <LazyLoadImage effect="blur" className="avatar" src={photo} />
           </div>
           <AboutArticle goNext={goNext} goBack={goBack} />
         </section>
