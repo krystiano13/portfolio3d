@@ -3,9 +3,12 @@ import gsap from "gsap";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
 import { ViewProject } from "./ViewProject";
+import { ProjectWaves } from "./ProjectWaves";
 
 import "../../Wrapper.css";
 import "../styles/Project.css";
+import { ProjectButtons } from "./ProjectButtons";
+import { ScreenShotViewer } from "./ScreenShotViewer";
 
 const Project = ({
   triggerAnimation,
@@ -14,6 +17,7 @@ const Project = ({
   left,
   live,
   code,
+  animation,
 }) => {
   const ProjectRef = React.useRef(null);
   const imageRef = React.useRef(null);
@@ -33,6 +37,8 @@ const Project = ({
   React.useEffect(() => {
     gsap.set(ProjectRef.current, { x: left ? 500 : -500, autoAlpha: 0 });
     gsap.to(ProjectRef.current, { x: 0, autoAlpha: 1, duration: 0.5 });
+
+    clearInterval();
 
     setInterval(() => {
       if (idRef.current !== 2) changeImage(idRef.current + 1);
@@ -66,6 +72,21 @@ const Project = ({
     setTimeout(() => navigate("/portfolioLiveTest/technologies"), 750);
   };
 
+  const goNext = () => {
+    gsap.to(ProjectRef.current, { x: left ? 500 : -500, autoAlpha: 0, duration: .5 })
+    .then(() => setTimeout(() => {
+       switch (animation) {
+         case "mars":
+           triggerAnimation(4);
+           break;
+         case "jupiter":
+           triggerAnimation(5);
+           break;
+       }
+    },100))
+    setTimeout(() => navigate("/portfolioLiveTest/projects/second"), 750);
+  }
+
   return (
     <main
       ref={ProjectRef}
@@ -96,44 +117,18 @@ const Project = ({
             {projectTitle}
           </h2>
           <section className="Project__content__info">
-            <div className="Project__content__info__buttons">
-              <button
-                onClick={goBack}
-                className="Project__content__info__buttons__button"
-              >
-                Back
-              </button>
-              <button
-                onClick={viewProject}
-                className="Project__content__info__buttons__button"
-              >
-                View Project
-              </button>
-              <button className="Project__content__info__buttons__button">
-                Next
-              </button>
-            </div>
-            <div className={`Project__content__info__screenShotViewer`}>
-              <div ref={imageRef} className={`img ${image}`} />
-              <div className="dots">
-                {arrayOfId.map((item) => (
-                  <section
-                    key={item}
-                    className={item === id ? "dot on" : "dot off"}
-                    onClick={() => changeImage(item)}
-                  />
-                ))}
-              </div>
-            </div>
+            <ProjectButtons goNext={goNext} goBack={goBack} viewProject={viewProject} />
+            <ScreenShotViewer
+              image={image}
+              imageRef={imageRef}
+              id={id}
+              arrayOfId={arrayOfId}
+              changeImage={changeImage}
+            />
           </section>
         </section>
       )}
-      <section className="Project__waves">
-        <div className="Project__waves__wave wave1"></div>
-        <div className="Project__waves__wave wave2"></div>
-        <div className="Project__waves__wave wave3"></div>
-        <div className="Project__waves__wave wave4"></div>
-      </section>
+      <ProjectWaves />
     </main>
   );
 };
@@ -145,6 +140,8 @@ Project.propTypes = {
   left: PropTypes.bool,
   live: PropTypes.string,
   code: PropTypes.string,
+  animation: PropTypes.string,
+  animState: PropTypes.number
 };
 
 export default Project;

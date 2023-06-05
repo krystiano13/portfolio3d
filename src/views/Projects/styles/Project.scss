@@ -94,11 +94,11 @@
           }
 
           .on {
-            background-color: rgba(153, 1, 153,1);
+            background-color: rgba(153, 1, 153, 1);
           }
 
           .off {
-            background-color: rgba(153, 1, 153,0.5);
+            background-color: rgba(153, 1, 153, 0.5);
           }
         }
       }
@@ -113,19 +113,30 @@
       .p13 {
         background-image: url("../../../images/1p3.png");
       }
+
+      .p21 {
+        background-image: url("../../../images/2p1.png");
+      }
+
+      .p22 {
+        background-image: url("../../../images/2p2.png");
+      }
+      .p23 {
+        background-image: url("../../../images/2p3.png");
+      }
     }
 
     &__title {
       font-size: 6vh;
       padding-top: 4vh;
-      padding-left : 4vh;
+      padding-left: 4vh;
       padding-right: 4vh;
     }
 
     &__subtitle {
       font-size: 3vh;
       margin-top: 2vh;
-      padding-left : 4vh;
+      padding-left: 4vh;
       padding-right: 4vh;
     }
   }
@@ -208,7 +219,7 @@
 }
 
 .right {
-  margin-left : 10vh;
+  margin-left: 10vh;
 }
 
 .leftText {

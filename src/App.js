@@ -10,7 +10,10 @@ const About = React.lazy(() => import("./views/About/About"));
 const Technologies = React.lazy(() =>
   import("./views/Technologies/Technologies")
 );
-const Project = React.lazy(() => import("./views/Projects/Subpages/Project"));
+const ProjectFirst = React.lazy(() => import('./views/Projects/Project1Handler'));
+const ProjectSecond = React.lazy(() =>
+  import("./views/Projects/Project2Handler")
+);
 
 const App = () => {
   const [animState, setAnimState] = React.useState(-1);
@@ -51,13 +54,20 @@ const App = () => {
               path="/portfolioLiveTest/projects/first"
               element={
                 <Suspense>
-                  <Project
-                    projectTitle="Pomodoro Timer"
-                    arrayOfClasses={["p11", "p12", "p13"]}
+                  <ProjectFirst
                     triggerAnimation={triggerAnimation}
-                    left={true}
-                    live="https://krystiano13.github.io/pomodoro/"
-                    code="https://github.com/krystiano13/pomodoro_src"
+                    animState={animState}
+                  />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/portfolioLiveTest/projects/second"
+              element={
+                <Suspense>
+                  <ProjectSecond
+                    triggerAnimation={triggerAnimation}
+                    animState={animState}
                   />
                 </Suspense>
               }

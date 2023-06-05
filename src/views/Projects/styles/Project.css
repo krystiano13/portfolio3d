@@ -97,6 +97,15 @@
 .Project__content__info .p13 {
   background-image: url("../../../images/1p3.png");
 }
+.Project__content__info .p21 {
+  background-image: url("../../../images/2p1.png");
+}
+.Project__content__info .p22 {
+  background-image: url("../../../images/2p2.png");
+}
+.Project__content__info .p23 {
+  background-image: url("../../../images/2p3.png");
+}
 .Project__content__title {
   font-size: 6vh;
   padding-top: 4vh;

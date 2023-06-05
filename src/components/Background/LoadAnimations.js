@@ -22,6 +22,8 @@ const LoadAnimations = (CameraRef, animState) => {
         EarthPos(CameraRef);
         EarthRot(CameraRef);
         break;
+      default:
+        break;
     }
   }
 };
