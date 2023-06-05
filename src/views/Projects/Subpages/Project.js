@@ -17,6 +17,7 @@ const Project = ({
 }) => {
   const ProjectRef = React.useRef(null);
   const imageRef = React.useRef(null);
+  const contentRef = React.useRef(null);
   const idRef = React.useRef(0);
   const navigate = useNavigate();
   const [image, setImage] = React.useState(arrayOfClasses[0]);
@@ -31,7 +32,7 @@ const Project = ({
 
   React.useEffect(() => {
     gsap.set(ProjectRef.current, { x: left ? 500 : -500, autoAlpha: 0 });
-    gsap.to(ProjectRef.current, { x: 0, autoAlpha: 1, duration: 0.75 });
+    gsap.to(ProjectRef.current, { x: 0, autoAlpha: 1, duration: 0.5 });
 
     setInterval(() => {
       if (idRef.current !== 2) changeImage(idRef.current + 1);
@@ -39,7 +40,13 @@ const Project = ({
     }, 7000);
   }, []);
 
-  const disableView = () => setView(false);
+  const disableView = () => {
+    setView(false);
+  };
+
+  const viewProject = () => {
+    setView(true);
+  };
 
   const changeImage = (id) => {
     setId(id);
@@ -69,9 +76,25 @@ const Project = ({
       {view === true ? (
         <ViewProject live={live} code={code} disableView={disableView} />
       ) : (
-        <section className="Project__content">
-          <h1 className="Project__content__title">Selected Projects</h1>
-          <h2 className="Project__content__subtitle">{projectTitle}</h2>
+        <section ref={contentRef} className="Project__content">
+          <h1
+            className={
+              left
+                ? "Project__content__title rightText"
+                : "Project__content__title leftText"
+            }
+          >
+            Selected Projects
+          </h1>
+          <h2
+            className={
+              left
+                ? "Project__content__subtitle rightText"
+                : "Project__content__subtitle leftText"
+            }
+          >
+            {projectTitle}
+          </h2>
           <section className="Project__content__info">
             <div className="Project__content__info__buttons">
               <button
@@ -81,7 +104,7 @@ const Project = ({
                 Back
               </button>
               <button
-                onClick={() => setView(true)}
+                onClick={viewProject}
                 className="Project__content__info__buttons__button"
               >
                 View Project
