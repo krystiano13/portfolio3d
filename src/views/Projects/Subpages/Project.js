@@ -68,24 +68,70 @@ const Project = ({
       autoAlpha: 0,
       duration: 0.75,
     });
-    setTimeout(() => triggerAnimation(2), 500);
-    setTimeout(() => navigate("/portfolioLiveTest/technologies"), 750);
+    setTimeout(() => {
+      switch (animation) {
+        case "mars":
+          triggerAnimation(2);
+          break;
+        case "jupiter":
+          triggerAnimation(3);
+          break;
+        case "saturn":
+          triggerAnimation(4);
+          break;
+      }
+    }, 500);
+    setTimeout(() => {
+      switch (animation) {
+        case "mars":
+          navigate("/portfolioLiveTest/technologies");
+          break;
+        case "jupiter":
+          navigate("/portfolioLiveTest/projects/first");
+          break;
+        case "saturn":
+          navigate("/portfolioLiveTest/projects/second");
+          break;
+      }
+    }, 750);
   };
 
   const goNext = () => {
-    gsap.to(ProjectRef.current, { x: left ? 500 : -500, autoAlpha: 0, duration: .5 })
-    .then(() => setTimeout(() => {
-       switch (animation) {
-         case "mars":
-           triggerAnimation(4);
-           break;
-         case "jupiter":
-           triggerAnimation(5);
-           break;
-       }
-    },100))
-    setTimeout(() => navigate("/portfolioLiveTest/projects/second"), 750);
-  }
+    gsap
+      .to(ProjectRef.current, {
+        x: left ? 500 : -500,
+        autoAlpha: 0,
+        duration: 0.5,
+      })
+      .then(() =>
+        setTimeout(() => {
+          switch (animation) {
+            case "mars":
+              triggerAnimation(4);
+              break;
+            case "jupiter":
+              triggerAnimation(5);
+              break;
+            case "saturn":
+              triggerAnimation(6);
+              break;
+          }
+        }, 100)
+      );
+    setTimeout(() => {
+      switch (animation) {
+        case "mars":
+          navigate("/portfolioLiveTest/projects/second");
+          break;
+        case "jupiter":
+          navigate("/portfolioLiveTest/projects/third");
+          break;
+        case "saturn":
+          navigate("/portfolioLiveTest/projects/second");
+          break;
+      }
+    }, 750);
+  };
 
   return (
     <main
@@ -117,7 +163,11 @@ const Project = ({
             {projectTitle}
           </h2>
           <section className="Project__content__info">
-            <ProjectButtons goNext={goNext} goBack={goBack} viewProject={viewProject} />
+            <ProjectButtons
+              goNext={goNext}
+              goBack={goBack}
+              viewProject={viewProject}
+            />
             <ScreenShotViewer
               image={image}
               imageRef={imageRef}
@@ -141,7 +191,7 @@ Project.propTypes = {
   live: PropTypes.string,
   code: PropTypes.string,
   animation: PropTypes.string,
-  animState: PropTypes.number
+  animState: PropTypes.number,
 };
 
 export default Project;

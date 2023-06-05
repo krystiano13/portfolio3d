@@ -7,7 +7,7 @@ export const Routes = [
     path: "/portfolioLiveTest/projects/first",
     live: "https://krystiano13.github.io/pomodoro/",
     code: "https://github.com/krystiano13/pomodoro_src",
-    animation: 'mars'
+    animation: "mars",
   },
   {
     id: 1,
@@ -17,6 +17,16 @@ export const Routes = [
     path: "/portfolioLiveTest/projects/second",
     live: "https://krystiano13.github.io/memberbase/",
     code: "https://github.com/krystiano13/memberbase_src",
-    animation: 'jupiter'
+    animation: "jupiter",
+  },
+  {
+    id: 2,
+    projectTitle: "Propel Your Business",
+    arrayOfClasses: ["p31", "p32", "p33"],
+    left: true,
+    path: "/portfolioLiveTest/projects/third",
+    live: "https://krystiano13.github.io/propel/",
+    code: "https://github.com/krystiano13/propel",
+    animation: "saturn",
   },
 ];

@@ -10,9 +10,14 @@ const About = React.lazy(() => import("./views/About/About"));
 const Technologies = React.lazy(() =>
   import("./views/Technologies/Technologies")
 );
-const ProjectFirst = React.lazy(() => import('./views/Projects/Project1Handler'));
+const ProjectFirst = React.lazy(() =>
+  import("./views/Projects/Project1Handler")
+);
 const ProjectSecond = React.lazy(() =>
   import("./views/Projects/Project2Handler")
+);
+const ProjectThird = React.lazy(() =>
+  import("./views/Projects/Project3Handler")
 );
 
 const App = () => {
@@ -66,6 +71,17 @@ const App = () => {
               element={
                 <Suspense>
                   <ProjectSecond
+                    triggerAnimation={triggerAnimation}
+                    animState={animState}
+                  />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/portfolioLiveTest/projects/third"
+              element={
+                <Suspense>
+                  <ProjectThird
                     triggerAnimation={triggerAnimation}
                     animState={animState}
                   />
