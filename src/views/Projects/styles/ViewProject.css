@@ -3,11 +3,23 @@
   height: 65vh;
   position: fixed;
 }
+@media screen and (orientation: portrait) {
+  .ViewProject {
+    width: 100vw;
+    height: 100vh;
+  }
+}
 .ViewProject__title {
   text-align: center;
   font-size: 6vh;
   padding-top: 4vh;
   padding-right: 4vh;
+}
+@media screen and (orientation: portrait) {
+  .ViewProject__title {
+    width: 100vw;
+    padding-right: 0;
+  }
 }
 .ViewProject__buttons {
   display: flex;
@@ -15,6 +27,11 @@
   justify-content: space-evenly;
   align-items: center;
   height: 80%;
+}
+@media screen and (orientation: portrait) {
+  .ViewProject__buttons {
+    height: 60%;
+  }
 }
 
 .viewButton {

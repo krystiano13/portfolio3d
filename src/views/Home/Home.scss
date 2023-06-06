@@ -61,6 +61,11 @@
       font-size: 2vh;
       cursor: pointer;
       font-weight: 500;
+
+      @media screen and (orientation : portrait) {
+        width : 40vw;
+        margin-left : 55vw;
+      }
     }
   }
 

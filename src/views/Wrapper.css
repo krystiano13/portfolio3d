@@ -3,4 +3,13 @@
   z-index: 10;
   background-color: #322f33;
   border-radius: 5vh;
+}
+@media screen and (orientation: portrait) {
+  .Wrapper {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0;
+    background-color: rgba(50, 47, 51, 0.4);
+  }
 }/*# sourceMappingURL=Wrapper.css.map */

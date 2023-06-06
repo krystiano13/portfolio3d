@@ -10,6 +10,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (orientation: portrait) {
+  .Project {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+}
 .Project__content {
   width: 110vh;
   height: 65vh;
@@ -17,12 +24,27 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (orientation: portrait) {
+  .Project__content {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+  }
+}
 .Project__content__info {
   width: 110vh;
   display: flex;
   justify-content: space-between;
   padding-left: 4vh;
   padding-right: 4vh;
+}
+@media screen and (orientation: portrait) {
+  .Project__content__info {
+    width: 100vw;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 2.5vh;
+  }
 }
 .Project__content__info__buttons {
   width: auto;
@@ -41,6 +63,7 @@
   background-color: rgb(153, 1, 153);
   cursor: pointer;
   font-size: 2vh;
+  margin-top: 2.5vh;
 }
 .Project__content__info__screenShotViewer {
   width: 65vh;
@@ -58,6 +81,14 @@
   will-change: background;
   background-color: transparent;
   padding-bottom: 3vh;
+}
+@media screen and (orientation: portrait) {
+  .Project__content__info__screenShotViewer {
+    width: 85vw;
+    height: 35vh;
+    background-size: 100%;
+    margin: 0;
+  }
 }
 .Project__content__info__screenShotViewer .img {
   position: absolute;
@@ -133,6 +164,12 @@
   position: relative;
   overflow: hidden;
   z-index: -50;
+}
+@media screen and (orientation: portrait) {
+  .Project__waves {
+    margin-top: 35%;
+    opacity: 0.5;
+  }
 }
 .Project__waves__wave {
   position: absolute;
@@ -216,9 +253,19 @@
     margin-left: 45vh;
   }
 }
+@media screen and (orientation: portrait) {
+  .left {
+    margin: 0;
+  }
+}
 
 .right {
   margin-left: 10vh;
+}
+@media screen and (orientation: portrait) {
+  .right {
+    margin: 0;
+  }
 }
 
 .leftText {

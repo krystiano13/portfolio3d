@@ -12,6 +12,12 @@
   flex-direction: column;
   justify-content: space-between;
 
+  @media screen and (orientation: portrait) {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+
   &__content {
     width: 110vh;
     height: 65vh;
@@ -19,12 +25,25 @@
     display: flex;
     flex-direction: column;
 
+    @media screen and (orientation: portrait) {
+      width: 100vw;
+      height: auto;
+      margin: 0;
+    }
+
     &__info {
       width: 110vh;
       display: flex;
       justify-content: space-between;
       padding-left: 4vh;
       padding-right: 4vh;
+
+      @media screen and (orientation: portrait) {
+        width: 100vw;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top : 2.5vh;
+      }
 
       &__buttons {
         width: auto;
@@ -44,6 +63,7 @@
           background-color: rgb(153, 1, 153);
           cursor: pointer;
           font-size: 2vh;
+          margin-top : 2.5vh;
         }
       }
 
@@ -56,6 +76,13 @@
         border-radius: 2vh;
         background-size: cover;
         background-position: center;
+
+        @media screen and (orientation: portrait) {
+          width: 85vw;
+          height: 35vh;
+          background-size: 100%;
+          margin: 0;
+        }
 
         display: flex;
         align-items: flex-end;
@@ -159,6 +186,11 @@
     overflow: hidden;
     z-index: -50;
 
+    @media screen and (orientation: portrait) {
+      margin-top : 35%;
+      opacity : 0.5;
+    }
+
     &__wave {
       position: absolute;
       bottom: 0;
@@ -228,30 +260,37 @@
 .left {
   margin-left: 90vh;
 
-  @media screen and (max-width : 800px) {
+  @media screen and (max-width: 800px) {
     margin-left: 18vh;
   }
 
-
-  @media screen and (max-width : 1024px) and (min-width : 800px) {
+  @media screen and (max-width: 1024px) and (min-width: 800px) {
     margin-left: 20vh;
   }
 
-  @media screen and (max-width : 1366px) and (min-width : 1025px) {
+  @media screen and (max-width: 1366px) and (min-width: 1025px) {
     margin-left: 60vh;
   }
 
-  @media screen and (max-width : 1366px) and (min-width : 1025px) and (min-height : 730px){
+  @media screen and (max-width: 1366px) and (min-width: 1025px) and (min-height: 730px) {
     margin-left: 52vh;
   }
 
   @media screen and (min-width: 1367px) and (max-width: 1500px) {
     margin-left: 45vh;
   }
+
+  @media screen and (orientation: portrait) {
+    margin: 0;
+  }
 }
 
 .right {
   margin-left: 10vh;
+
+  @media screen and (orientation: portrait) {
+    margin: 0;
+  }
 }
 
 .leftText {

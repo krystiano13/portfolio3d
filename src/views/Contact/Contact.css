@@ -5,10 +5,23 @@
   margin-left: 5vh;
   margin-top: 10vh;
 }
+@media screen and (orientation: portrait) {
+  .Contact {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+}
 .Contact__content {
   width: 60vh;
   height: 70%;
   position: fixed;
+}
+@media screen and (orientation: portrait) {
+  .Contact__content {
+    width: 100vw;
+    margin: 0;
+  }
 }
 .Contact__content__main {
   width: 60vh;
@@ -17,6 +30,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+@media screen and (orientation: portrait) {
+  .Contact__content__main {
+    width: 100vw;
+    margin: 0;
+  }
 }
 .Contact__content__main .ContactButton {
   width: 25vh;
@@ -44,6 +63,11 @@
   overflow: hidden;
   margin-top: 28%;
   z-index: -50;
+}
+@media screen and (orientation: portrait) {
+  .Contact__waves {
+    margin-top: 42%;
+  }
 }
 .Contact__waves__wave {
   position: absolute;

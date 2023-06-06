@@ -11,6 +11,13 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (orientation: portrait) {
+  .Technologies {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+  }
+}
 .Technologies__waves {
   width: 100%;
   height: 80%;
@@ -18,6 +25,11 @@
   overflow: hidden;
   margin-top: 35%;
   z-index: -50;
+}
+@media screen and (orientation: portrait) {
+  .Technologies__waves {
+    margin-top: 80%;
+  }
 }
 .Technologies__waves__wave {
   position: absolute;
@@ -77,6 +89,13 @@
   height: 70%;
   position: fixed;
 }
+@media screen and (orientation: portrait) {
+  .Technologies__content {
+    width: 100vw;
+    height: 90%;
+    margin: 0;
+  }
+}
 .Technologies__content__techSection {
   width: 100vh;
   height: 30%;
@@ -84,6 +103,11 @@
   display: flex;
   align-content: center;
   flex-wrap: wrap;
+}
+@media screen and (orientation: portrait) {
+  .Technologies__content__techSection {
+    width: 100vw;
+  }
 }
 .Technologies__content__techSection .skill {
   color: white;
@@ -123,6 +147,11 @@
   margin-left: 5vh;
   z-index: 1000;
 }
+@media screen and (orientation: portrait) {
+  .Technologies__content__Buttons {
+    width: 85vw;
+  }
+}
 .Technologies__content__Buttons__btn {
   height: 3vh;
   width: 20vh;
@@ -134,4 +163,10 @@
   border: none;
   border-radius: 2vh;
   font-size: 2vh;
+}
+@media screen and (orientation: portrait) {
+  .Technologies__content__Buttons__btn {
+    width: 40vw;
+    height: 3.5vh;
+  }
 }/*# sourceMappingURL=Technologies.css.map */
