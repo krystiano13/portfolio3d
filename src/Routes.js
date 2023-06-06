@@ -26,7 +26,7 @@ export const Routes = [
     left: true,
     path: "/portfolioLiveTest/projects/third",
     live: "https://krystiano13.github.io/propel/",
-    code: "https://github.com/krystiano13/propel",
+    code: "https://github.com/krystiano13/propel-src",
     animation: "saturn",
   },
 ];

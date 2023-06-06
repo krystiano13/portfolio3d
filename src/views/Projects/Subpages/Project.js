@@ -127,7 +127,7 @@ const Project = ({
           navigate("/portfolioLiveTest/projects/third");
           break;
         case "saturn":
-          navigate("/portfolioLiveTest/projects/second");
+          navigate("/portfolioLiveTest/contact");
           break;
       }
     }, 750);

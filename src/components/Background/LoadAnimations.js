@@ -4,6 +4,7 @@ import { VenusPos, VenusRot } from "./Animations/VenusAnim";
 import { EarthPos, EarthRot } from "./Animations/EarthAnim";
 import { MarsPos, MarsRot } from "./Animations/MarsAnim";
 import { JupiterPos, JupiterRot } from "./Animations/JupiterAnim";
+import { SaturnPos, SaturnRot } from "./Animations/SaturnAnim";
 
 const LoadAnimations = (CameraRef, animState) => {
   if (CameraRef.current !== null) {
@@ -31,6 +32,10 @@ const LoadAnimations = (CameraRef, animState) => {
       case 5:
         JupiterPos(CameraRef);
         JupiterRot(CameraRef);
+        break;
+      case 6:
+        SaturnPos(CameraRef);
+        SaturnRot(CameraRef);
         break;
       default:
         break;
