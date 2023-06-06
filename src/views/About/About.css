@@ -8,6 +8,21 @@
   transform: translateX(100vw);
   opacity: 0;
 }
+@media screen and (max-width: 1100px) {
+  .About {
+    margin-left: 22vw;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1280px) {
+  .About {
+    margin-left: 37vw;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .About {
+    margin-left: 35vw;
+  }
+}
 .About__content {
   width: 100%;
   height: 100%;
@@ -34,12 +49,39 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media screen and (max-width: 1100px) {
+  .About__content__info__art {
+    position: fixed;
+    transform: translateX(25vh);
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .About__content__info__art {
+    position: fixed;
+    transform: translateX(25vh);
+  }
+}
 .About__content__info__art__text {
   width: 100%;
   max-width: 80%;
   height: 30vh;
-  font-size: 1.3vw;
+  font-size: 2.7vh;
   height: auto;
+}
+@media screen and (max-width: 1100px) {
+  .About__content__info__art__text {
+    font-size: 2.65vh;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1280px) {
+  .About__content__info__art__text {
+    font-size: 2.5vh;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .About__content__info__art__text {
+    font-size: 2.63vh;
+  }
 }
 .About__content__info__art__Buttons {
   width: 45vh;

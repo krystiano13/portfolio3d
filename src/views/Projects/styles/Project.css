@@ -1,5 +1,5 @@
 .Project {
-  width: 55vw;
+  width: 110vh;
   height: 80vh;
   margin-top: 10vh;
   position: fixed;
@@ -11,14 +11,14 @@
   justify-content: space-between;
 }
 .Project__content {
-  width: 55vw;
+  width: 110vh;
   height: 65vh;
   position: fixed;
   display: flex;
   flex-direction: column;
 }
 .Project__content__info {
-  width: 55vw;
+  width: 110vh;
   display: flex;
   justify-content: space-between;
   padding-left: 4vh;
@@ -189,7 +189,32 @@
 }
 
 .left {
-  margin-left: 40vw;
+  margin-left: 90vh;
+}
+@media screen and (max-width: 800px) {
+  .left {
+    margin-left: 18vh;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 800px) {
+  .left {
+    margin-left: 20vh;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1025px) {
+  .left {
+    margin-left: 60vh;
+  }
+}
+@media screen and (max-width: 1366px) and (min-width: 1025px) and (min-height: 730px) {
+  .left {
+    margin-left: 52vh;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .left {
+    margin-left: 45vh;
+  }
 }
 
 .right {
