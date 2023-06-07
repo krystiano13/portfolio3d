@@ -1,21 +1,11 @@
 .Home {
   width: 63vh;
   height: 80vh;
-  position: fixed;
+  justify-self: end;
+  margin-right: 10vh;
   z-index: 10;
-  margin-left: 60vw;
   margin-top: 10vh;
   transform: translateX(100vw);
-}
-@media screen and (max-width: 1100px) {
-  .Home {
-    margin-left: 48vw;
-  }
-}
-@media screen and (min-width: 1367px) and (max-width: 1500px) {
-  .Home {
-    margin-left: 57vw;
-  }
 }
 @keyframes appear {
   0% {

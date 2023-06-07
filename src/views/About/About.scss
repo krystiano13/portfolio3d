@@ -2,22 +2,11 @@
   width: 100vh;
   height: 80vh;
 
-  position: fixed;
+  justify-self: end;
+  margin-right : 10vh;
+
   z-index: 10;
-  margin-left: 45vw;
   margin-top: 10vh;
-
-  @media screen and (max-width: 1100px) {
-    margin-left: 22vw;
-  }
-
-  @media screen and (max-width: 1366px) and (min-width: 1280px) {
-    margin-left: 37vw;
-  }
-
-  @media screen and (min-width: 1367px) and (max-width: 1500px) {
-    margin-left: 35vw;
-  }
 
   @media screen and (orientation: portrait) {
     margin: 0;
@@ -53,17 +42,26 @@
       align-items: center;
       width: 50vw;
       margin-left: 4vh;
+      height: auto;
+
+      @media screen and (max-width: 1366px) {
+        width: 95vw;
+      }
+
+      @media screen and (min-width: 1367px) and (max-width: 1500px) {
+        width: 65vw;
+      }
 
       @media screen and (orientation: portrait) {
         position: fixed;
-        display : grid;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-columns: repeat(1,1fr);
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         justify-items: center;
         align-items: center;
-        width : 100vw;
+        width: 100vw;
         height: 80vh;
-        margin : 0;
+        margin: 0;
       }
 
       &__art {
@@ -74,31 +72,32 @@
         flex-direction: column;
         justify-content: space-between;
 
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 1366px) {
           position: fixed;
           transform: translateX(25vh);
         }
 
-        @media screen and (min-width: 1367px) and (max-width: 1500px) {
+        @media screen and (min-width: 1367px) and (max-width: 1900px) {
           position: fixed;
           transform: translateX(25vh);
+          width: 70%;
         }
 
         @media screen and (orientation: portrait) {
-          width : 80%;
-          height : auto;
+          width: 80%;
+          height: auto;
           transform: translateX(0vh) translateY(-5vh);
         }
 
         &__text {
-          width: 100%;
-          max-width: 80%;
+          width: 90%;
+          max-width: 70%;
           height: 30vh;
           font-size: 2.7vh;
           height: auto;
 
-          @media screen and (max-width: 1100px) {
-            font-size: 2.65vh;
+          @media screen and (max-width: 1365px) {
+            font-size: 2.6vh;
           }
 
           @media screen and (max-width: 1366px) and (min-width: 1280px) {
@@ -109,10 +108,18 @@
             font-size: 2.63vh;
           }
 
+          @media screen and (min-width : 1501px) and (max-width : 1800px) {
+            font-size : 2.6vh;
+          }
+
+          @media screen and (min-width : 1801px) {
+            font-size : 2.65vh;
+          }
+
           @media screen and (orientation: portrait) {
             font-size: 1.9vh;
             max-width: 100%;
-            width : 100%;
+            width: 100%;
             height: auto;
             text-align: center;
           }

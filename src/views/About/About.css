@@ -1,27 +1,12 @@
 .About {
   width: 100vh;
   height: 80vh;
-  position: fixed;
+  justify-self: end;
+  margin-right: 10vh;
   z-index: 10;
-  margin-left: 45vw;
   margin-top: 10vh;
   transform: translateX(100vw);
   opacity: 0;
-}
-@media screen and (max-width: 1100px) {
-  .About {
-    margin-left: 22vw;
-  }
-}
-@media screen and (max-width: 1366px) and (min-width: 1280px) {
-  .About {
-    margin-left: 37vw;
-  }
-}
-@media screen and (min-width: 1367px) and (max-width: 1500px) {
-  .About {
-    margin-left: 35vw;
-  }
 }
 @media screen and (orientation: portrait) {
   .About {
@@ -55,6 +40,17 @@
   align-items: center;
   width: 50vw;
   margin-left: 4vh;
+  height: auto;
+}
+@media screen and (max-width: 1366px) {
+  .About__content__info {
+    width: 95vw;
+  }
+}
+@media screen and (min-width: 1367px) and (max-width: 1500px) {
+  .About__content__info {
+    width: 65vw;
+  }
 }
 @media screen and (orientation: portrait) {
   .About__content__info {
@@ -76,16 +72,17 @@
   flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1366px) {
   .About__content__info__art {
     position: fixed;
     transform: translateX(25vh);
   }
 }
-@media screen and (min-width: 1367px) and (max-width: 1500px) {
+@media screen and (min-width: 1367px) and (max-width: 1900px) {
   .About__content__info__art {
     position: fixed;
     transform: translateX(25vh);
+    width: 70%;
   }
 }
 @media screen and (orientation: portrait) {
@@ -96,15 +93,15 @@
   }
 }
 .About__content__info__art__text {
-  width: 100%;
-  max-width: 80%;
+  width: 90%;
+  max-width: 70%;
   height: 30vh;
   font-size: 2.7vh;
   height: auto;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1365px) {
   .About__content__info__art__text {
-    font-size: 2.65vh;
+    font-size: 2.6vh;
   }
 }
 @media screen and (max-width: 1366px) and (min-width: 1280px) {
@@ -115,6 +112,16 @@
 @media screen and (min-width: 1367px) and (max-width: 1500px) {
   .About__content__info__art__text {
     font-size: 2.63vh;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1800px) {
+  .About__content__info__art__text {
+    font-size: 2.6vh;
+  }
+}
+@media screen and (min-width: 1801px) {
+  .About__content__info__art__text {
+    font-size: 2.65vh;
   }
 }
 @media screen and (orientation: portrait) {

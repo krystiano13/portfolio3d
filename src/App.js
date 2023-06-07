@@ -35,69 +35,71 @@ const App = () => {
           <section className="PlanetsContainer">
             <Planets animState={animState} />
           </section>
-          <Routes>
-            <Route
-              path="/portfolioLiveTest"
-              element={<Home triggerAnimation={triggerAnimation} />}
-            />
-            <Route
-              path="/portfolioLiveTest/about"
-              element={
-                <Suspense>
-                  <About triggerAnimation={triggerAnimation} />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/portfolioLiveTest/technologies"
-              element={
-                <Suspense>
-                  <Technologies triggerAnimation={triggerAnimation} />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/portfolioLiveTest/projects/first"
-              element={
-                <Suspense>
-                  <ProjectFirst
-                    triggerAnimation={triggerAnimation}
-                    animState={animState}
-                  />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/portfolioLiveTest/projects/second"
-              element={
-                <Suspense>
-                  <ProjectSecond
-                    triggerAnimation={triggerAnimation}
-                    animState={animState}
-                  />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/portfolioLiveTest/projects/third"
-              element={
-                <Suspense>
-                  <ProjectThird
-                    triggerAnimation={triggerAnimation}
-                    animState={animState}
-                  />
-                </Suspense>
-              }
-            />
-            <Route
-              path="/portfolioLiveTest/contact"
-              element={
-                <Suspense>
-                  <Contact triggerAnimation={triggerAnimation} />
-                </Suspense>
-              }
-            />
-          </Routes>
+          <section className="PageWrapper">
+            <Routes>
+              <Route
+                path="/portfolioLiveTest"
+                element={<Home triggerAnimation={triggerAnimation} />}
+              />
+              <Route
+                path="/portfolioLiveTest/about"
+                element={
+                  <Suspense>
+                    <About triggerAnimation={triggerAnimation} />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/portfolioLiveTest/technologies"
+                element={
+                  <Suspense>
+                    <Technologies triggerAnimation={triggerAnimation} />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/portfolioLiveTest/projects/first"
+                element={
+                  <Suspense>
+                    <ProjectFirst
+                      triggerAnimation={triggerAnimation}
+                      animState={animState}
+                    />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/portfolioLiveTest/projects/second"
+                element={
+                  <Suspense>
+                    <ProjectSecond
+                      triggerAnimation={triggerAnimation}
+                      animState={animState}
+                    />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/portfolioLiveTest/projects/third"
+                element={
+                  <Suspense>
+                    <ProjectThird
+                      triggerAnimation={triggerAnimation}
+                      animState={animState}
+                    />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="/portfolioLiveTest/contact"
+                element={
+                  <Suspense>
+                    <Contact triggerAnimation={triggerAnimation} />
+                  </Suspense>
+                }
+              />
+            </Routes>
+          </section>
         </BrowserRouter>
       </Suspense>
     </div>

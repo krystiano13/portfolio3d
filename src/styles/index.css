@@ -9,4 +9,11 @@
 
 body {
   background-color: #222;
+}
+
+.PageWrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
 }/*# sourceMappingURL=index.css.map */

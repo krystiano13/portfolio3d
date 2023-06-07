@@ -226,32 +226,8 @@
 }
 
 .left {
-  margin-left: 90vh;
-}
-@media screen and (max-width: 800px) {
-  .left {
-    margin-left: 18vh;
-  }
-}
-@media screen and (max-width: 1024px) and (min-width: 800px) {
-  .left {
-    margin-left: 20vh;
-  }
-}
-@media screen and (max-width: 1366px) and (min-width: 1025px) {
-  .left {
-    margin-left: 60vh;
-  }
-}
-@media screen and (max-width: 1366px) and (min-width: 1025px) and (min-height: 730px) {
-  .left {
-    margin-left: 52vh;
-  }
-}
-@media screen and (min-width: 1367px) and (max-width: 1500px) {
-  .left {
-    margin-left: 45vh;
-  }
+  margin-right: 5vh;
+  justify-self: end;
 }
 @media screen and (orientation: portrait) {
   .left {
@@ -260,7 +236,8 @@
 }
 
 .right {
-  margin-left: 10vh;
+  margin-left: 5vh;
+  justify-self: start;
 }
 @media screen and (orientation: portrait) {
   .right {
