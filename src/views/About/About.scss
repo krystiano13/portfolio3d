@@ -18,7 +18,7 @@
   opacity: 0;
 
   &__content {
-    width: 100%;
+    width: 100vh;
     height: 100%;
     position: fixed;
     z-index: 1000;
@@ -40,7 +40,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 50vw;
+      width: 100vh;
       margin-left: 4vh;
       height: auto;
 
@@ -65,12 +65,13 @@
       }
 
       &__art {
-        width: 70%;
-        height: 30vh;
+        width : 75vh;
+        height : auto;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-content: flex-start;
 
         @media screen and (max-width: 1366px) {
           position: fixed;
@@ -80,19 +81,18 @@
         @media screen and (min-width: 1367px) and (max-width: 1900px) {
           position: fixed;
           transform: translateX(25vh);
-          width: 70%;
         }
 
         @media screen and (orientation: portrait) {
-          width: 80%;
-          height: auto;
+          width : 100vw;
+          padding-left : 3vh;
+          padding-right : 3vh;
           transform: translateX(0vh) translateY(-5vh);
         }
 
         &__text {
-          width: 90%;
+          width: 100%;
           max-width: 70%;
-          height: 30vh;
           font-size: 2.7vh;
           height: auto;
 
@@ -113,7 +113,7 @@
           }
 
           @media screen and (min-width : 1801px) {
-            font-size : 2.65vh;
+            font-size : 2.6vh;
           }
 
           @media screen and (orientation: portrait) {
