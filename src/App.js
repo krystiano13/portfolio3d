@@ -19,7 +19,7 @@ const ProjectSecond = React.lazy(() =>
 const ProjectThird = React.lazy(() =>
   import("./views/Projects/Project3Handler")
 );
-const Contact = React.lazy(() => import('./views/Contact/Contact'));
+const Contact = React.lazy(() => import("./views/Contact/Contact"));
 
 const App = () => {
   const [animState, setAnimState] = React.useState(-1);

@@ -3,22 +3,23 @@ export const techList = {
     "React",
     "Redux",
     "HTML",
-    "CSS",
+    "PHP",
     "SCSS",
     "Javascript",
     "Typescript",
     "styled-components",
     "git basics",
     "GSAP",
-    "SQL basics"
+    "MySQL"
   ],
   learn: [
     'Angular',
-    'Vue',
     'Three.js',
     'React-Three-Fiber',
-    "Node.js",
     "React-Final-Form",
-    "Express.js"
+    "Bootstrap",
+    "Vue",
+    "Tailwind",
+    'Symfony'
   ],
 };

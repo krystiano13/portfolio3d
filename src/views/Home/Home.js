@@ -32,7 +32,7 @@ const Home = ({ triggerAnimation }) => {
       <div ref={WrapperRef} className="Home Wrapper">
         <section className="Home__content">
           <h1 className="Home__content__title">Krystian Zieja</h1>
-          <h2 className="Home__content__subtitle">Frontend Developer</h2>
+          <h2 className="Home__content__subtitle">Web Developer</h2>
           <button
             onClick={() => {
               leaveAnimation();
