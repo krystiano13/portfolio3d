@@ -48,7 +48,7 @@ const Technologies = ({ triggerAnimation }) => {
           ))}
         </div>
         <h2 className="Technologies__content__subtitle">
-          That I&apos;m learning
+          That I want to learn :
         </h2>
         <div className="Technologies__content__techSection">
           {techList.learn.map((item) => (

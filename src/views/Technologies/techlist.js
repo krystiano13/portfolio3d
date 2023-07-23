@@ -7,19 +7,20 @@ export const techList = {
     "SCSS",
     "Javascript",
     "Typescript",
-    "styled-components",
+    "Bootstrap",
     "git basics",
     "GSAP",
-    "MySQL"
+    "MySQL",
+    "Gulp",
   ],
   learn: [
-    'Angular',
-    'Three.js',
-    'React-Three-Fiber',
+    "Angular",
+    "Three.js",
+    "React-Three-Fiber",
     "React-Final-Form",
-    "Bootstrap",
     "Vue",
     "Tailwind",
-    'Symfony'
+    "Symfony",
+    "Magento",
   ],
 };
