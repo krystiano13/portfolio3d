@@ -6,12 +6,6 @@
 <br>
 <img src="p2.png" alt="screenshot"/>
 
-<style>
-    img {
-        height : 25%;
-    }
-</style>
-
 <h3>Technologies :</h3>
 
 <ul>
